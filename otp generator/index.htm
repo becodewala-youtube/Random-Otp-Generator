@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>OTP Generator</title>
+        <link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="container">
+  <h1>Random OTP Generator</h1>
+  <div class="otp">
+    <input type="text" id="otp" readonly>
+    <button onclick="generateOTP()">Generate OTP</button>
+  </div>
+</div>
+<script>
+    function generateOTP() {
+  var digits = '0123456789';
+  var otpLength = 6;
+  var otp = '';
+
+  for (var i = 0; i < otpLength; i++) {
+    otp += digits[Math.floor(Math.random() * 10)];
+  }
+
+  document.getElementById('otp').value = otp;
+}
+
+</script>
+	</body>
+</html>
